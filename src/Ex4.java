@@ -16,7 +16,7 @@ public class Ex4 {
 
         System.out.print("Digite o valor da variável X: ");
         x = sc.nextDouble();
-        if (x < 1) {
+        if (x <= 5 && x >=-5) {
             System.out.printf("O valor %.2f é invalido como valor para X", x);
         }
         else {
