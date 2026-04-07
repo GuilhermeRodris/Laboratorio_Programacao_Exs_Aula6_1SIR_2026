@@ -1,35 +1,38 @@
-//Desconto em Compras
-//Uma loja de departamentos oferece desconto
-//em função do valor total das compras. Se o
-//total for maior que R$1.000,00 o cliente recebe
-//15% de desconto; caso contrário, recebe
-//apenas 8% de desconto.
-//Escreva um programa em Java que calcule e
-//imprima o valor final que o cliente irá pagar e o
-//valor economizado com o desconto.
+//Escreva um programa em Java que leia três
+//valores e verifique se os mesmos representam
+//os lados de um triângulo.
+//Para que os valores representem os lados de
+//um triângulo é necessário que cada um dos
+//lados seja menor que a soma dos outros dois:
 
 import java.util.Scanner;
 
 public class Ex5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double vcompra, vdesconto;
+        double l1, l2, l3, verifica1, verifica2, verifica3;
+        System.out.print("Digite o valor do primeiro lado do triângulo: ");
+        l1 = sc.nextDouble();
+        System.out.print("Digite o valor do segundo lado do triângulo: ");
+        l2  = sc.nextDouble();
+        System.out.print("Digite o valor do terceiro lado do triângulo: ");
+        l3 = sc.nextDouble();
 
-        System.out.print("Digite o valor da compra: ");
-        vcompra = sc.nextDouble();
+        verifica1 = l1 + l2;
+        verifica2 = l1 + l3;
+        verifica3 = l2 + l3;
 
-        if (vcompra > 1000){
-            vdesconto = vcompra * 0.15;
-            vcompra = vcompra - vdesconto;
-
+        if (verifica1 > l3){
+            if (verifica2 > l2){
+                if (verifica3 > l1){
+                    System.out.print("Os lados informados produzem um triângulo");
+                }
+            }
         }
 
-        else{
-            vdesconto = vcompra * 0.08;
-            vcompra = vcompra - vdesconto;
+        else {
+            System.out.println("Os lados informados não podem pertencer a um triângulo");
         }
 
-        System.out.printf("O valor do desconto foi de: %.2f\n", vdesconto );
-        System.out.printf("O valor final da compra foi de: %.2f\n", vcompra);
     }
 }
