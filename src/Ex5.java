@@ -22,12 +22,8 @@ public class Ex5 {
         verifica2 = l1 + l3;
         verifica3 = l2 + l3;
 
-        if (verifica1 > l3){
-            if (verifica2 > l2){
-                if (verifica3 > l1){
-                    System.out.print("Os lados informados produzem um triângulo");
-                }
-            }
+        if (verifica1 > l3 && verifica2 > l2 && verifica3 > l1){
+            System.out.print("Os lados informados produzem um triângulo");
         }
 
         else {
