@@ -8,33 +8,18 @@
 import java.util.Scanner;
 public class Ex6 {
     public static void main(String[] args) {
-        double ano, bissexto;
+        int ano;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o ano: ");
-        ano = sc.nextDouble();
+        ano = sc.nextInt();
 
-        bissexto = ano % 4;
-
-        if (bissexto == 0){
-            bissexto = ano % 100;
-            if (bissexto == 0){
-                bissexto = ano % 400;
-                if (bissexto == 0){
-                    System.out.printf("O ano %.0f é bissexto", ano );
-                }
-                else {
-                    System.out.printf("O ano %.0f não é bissexto", ano );
-                }
-            }
-            else {
-                System.out.printf("O ano %.0f ´é bissexto", ano );
-            }
-
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+            System.out.println("O ano" + ano + "é bissexto" );
         }
 
         else {
-            System.out.printf("O ano %.0f não é bissexto", ano);
+            System.out.println("O ano " + ano + " não é bissexto" );
         }
     }
 }
