@@ -23,11 +23,19 @@ public class Ex5 {
         verifica3 = l2 + l3;
 
         if (verifica1 > l3 && verifica2 > l2 && verifica3 > l1){
-            System.out.print("Os lados informados produzem um triângulo");
+            System.out.println("Os lados informados: ");
+            System.out.printf("Lado 1: %.2f \n", l1);
+            System.out.printf("Lado 1: %.2f \n", l2);
+            System.out.printf("Lado 1: %.2f \n", l3);
+            System.out.println("Formam um tringulo");
         }
 
         else {
-            System.out.println("Os lados informados não podem pertencer a um triângulo");
+            System.out.println("Os lados informados: ");
+            System.out.printf("Lado 1: %.2f \n", l1);
+            System.out.printf("Lado 1: %.2f \n", l2);
+            System.out.printf("Lado 1: %.2f \n", l3);
+            System.out.println("Não formam um tringulo");
         }
 
     }
